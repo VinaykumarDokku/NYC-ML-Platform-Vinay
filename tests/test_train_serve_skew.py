@@ -43,6 +43,11 @@ def _make_predictor():
     pred = object.__new__(NYCAirbnbPredictorONNX)
     pred.neighbourhood_means = NEIGHBOURHOOD_MEANS
     pred.global_mean = GLOBAL_MEAN
+    pred.neighbourhood_medians = {
+        "Williamsburg": 175.0,
+        "Midtown": 210.0,
+    }
+    pred.global_median = 145.0
     return pred
 
 
